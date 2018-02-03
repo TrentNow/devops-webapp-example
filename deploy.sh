@@ -39,3 +39,5 @@ if [ -z $CHECKROUTES ]; then
   echo "Create Route $DJOB_NAME"
   oc expose service $DJOB_NAME --hostname=$DROUTE_NAME
 fi
+
+echo "you can access your apps at http://${DROUTE_NAME}"
