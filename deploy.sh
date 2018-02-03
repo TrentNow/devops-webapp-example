@@ -23,7 +23,7 @@ if [ -z $CHECKBC ]; then
 fi
 
 
-BUILD_ID=`oc start-build $DJOB_NAME --follow --from-dir=${WORKSPACE}
+BUILD_ID=`oc start-build $DJOB_NAME --follow --from-dir=${WORKSPACE}`
 
 CHECKDC=`oc get dc | grep $DJOB_NAME | awk '{print $1}'`
 if [ -z $CHECKDC ]; then
